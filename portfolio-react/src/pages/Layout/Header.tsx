@@ -1,18 +1,18 @@
 
 import {useNavigate} from 'react-router';
 import Box from "@mui/material/Box";
-import {Button, IconButton, Menu, MenuItem,} from "@mui/material";
+import { IconButton, Menu, MenuItem,} from "@mui/material";
 import {useState} from "react";
 import MenuIcon from '@mui/icons-material/Menu';
 
 import logo from "../../assets/images/IconSite.svg";
-import texte from "../../assets/images/text.svg";
+import ButtonLayout from "../../components/buttons/ButtonLayout.tsx";
 
 
 const menuPages = [
     {name: 'Home', path: '/'},
     {name: 'About', path: '/About'},
-    {name: 'MakeUp', path: '/MakeUp'},
+    {name: 'MakeUp', path: '/Portfolio'},
 ];
 
 
@@ -31,7 +31,14 @@ export default function Header() {
 
     return (
         <>
-            <Box sx={{display: 'flex', justifyContent: "space-between", alignItems: "center", padding: "0 10px"}}>
+            <Box sx={{display: 'flex',
+                justifyContent: "space-between",
+                alignItems: "center",
+                padding: "0 10px",
+                borderBottom: '4px solid #FEC195',
+                boxShadow: 'none',
+                outline: 'none',
+            }}>
                 <Box sx={{ display: { xs: 'flex', sm: 'flex', md: 'none', lg: 'none', xl: 'none' }}}>
                     <IconButton
                         id="demo-positioned-button"
@@ -66,19 +73,16 @@ export default function Header() {
                     sx={{display: "flex", justifyContent: "space-between", alignItems: "center", cursor: "pointer"}}
                     onClick={() => navigate('/')}
                 >
-                    <img height={70} src={logo}/>
-                    <Box sx={{display: {xs: "none", sm: "flex"} }}>
-                        <img height={90} width={120} src={texte}/>
-                    </Box>
+                    <img height={70} src={logo} style={{margin: '5px'}}/>
                 </Box>
 
-                <Box sx={{ display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' } }}>
+                <Box sx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }}>
                     {menuPages.map((page) => (
-                        <Button
+                        <ButtonLayout
                             key={page.name}
-                            onClick={() => navigate(page.path)}>
-                            <span>{page.name}</span>
-                        </Button>
+                            name={page.name} // <-- passe le nom ici
+                            onClick={() => navigate(page.path)}
+                        />
                     ))}
                 </Box>
             </Box>
