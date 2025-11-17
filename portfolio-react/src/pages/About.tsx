@@ -1,7 +1,164 @@
-const About = () => {
+import { Box, Typography, Grid, Avatar, Card, CardContent } from "@mui/material";
+
+// --- Images à modifier selon ton projet ---
+import aboutImg from "../assets/images/about.jpg";
+
+// Logos clients
+import client1 from "../assets/clients/client1.png";
+
+
+export default function About() {
+    const clients = [
+        { name: "Client 1", logo: client1 },
+        { name: "Client 2", logo: client1 },
+        { name: "Client 3", logo: client1 },
+    ];
+
     return (
-        <>
-        </>
-    )
-};
-export default About;
+        <Box sx={{ padding: "60px 20px", maxWidth: "1200px", margin: "0 auto" }}>
+
+            {/* --------------------- SECTION 1 : À PROPOS --------------------- */}
+            <Typography
+                variant="h3"
+                sx={{
+                    textAlign: "center",
+                    marginBottom: "40px",
+                    color: "#FEC195",
+                    fontWeight: "bold",
+                }}
+            >
+                À propos de moi
+            </Typography>
+
+            <Grid container spacing={4} alignItems="center">
+
+                {/* PHOTO */}
+                <Grid item xs={12} md={5} sx={{ textAlign: "center" }}>
+                    <Avatar
+                        src={aboutImg}
+                        alt="Kelly Make-Up"
+                        sx={{
+                            width: 280,
+                            height: 280,
+                            border: "5px solid #FEC195",
+                            margin: "0 auto",
+                        }}
+                    />
+                </Grid>
+
+                {/* TEXTE */}
+                <Grid item xs={12} md={7}>
+                    <Typography
+                        sx={{
+                            textAlign: "justify",
+                            fontSize: "1.15rem",
+                            lineHeight: 1.8,
+                            color: "#fff",
+                        }}
+                    >
+                        {/* ---- Texte modifiable ---- */}
+                        Je m'appelle Kelly, maquilleuse passionnée spécialisée dans le maquillage
+                        artistique, glamour et effets spéciaux. J’aide mes clients à exprimer leur
+                        identité et leur créativité à travers des looks uniques et professionnels.
+
+                        <br /><br />
+
+                        Mon objectif : créer des maquillages sur mesure, adaptés à chaque
+                        personnalité, événement ou univers artistique.
+                    </Typography>
+                </Grid>
+            </Grid>
+
+            {/* --------------------- SECTION 2 : CLIENTS --------------------- */}
+            <Box sx={{ marginTop: "80px" }}>
+                <Typography
+                    variant="h4"
+                    sx={{
+                        textAlign: "center",
+                        marginBottom: "30px",
+                        color: "#FEC195",
+                        fontWeight: "bold",
+                    }}
+                >
+                    Ils m'ont fait confiance
+                </Typography>
+
+                <Grid container spacing={4} justifyContent="center">
+                    {clients.map((client, index) => (
+                        <Grid key={index} item xs={6} sm={4} md={3} lg={2}>
+                            <Card
+                                sx={{
+                                    background: "#1a1a1a",
+                                    padding: "20px",
+                                    borderRadius: "12px",
+                                    border: "2px solid #FEC195",
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                }}
+                            >
+                                <img
+                                    src={client.logo}
+                                    alt={client.name}
+                                    style={{
+                                        width: "100%",
+                                        height: "auto",
+                                        objectFit: "contain",
+                                        filter: "brightness(0.9)",
+                                    }}
+                                />
+                            </Card>
+                        </Grid>
+                    ))}
+                </Grid>
+            </Box>
+
+            {/* --------------------- SECTION 3 : ENTREPRISE & MOTIVATIONS --------------------- */}
+            <Box sx={{ marginTop: "80px" }}>
+                <Typography
+                    variant="h4"
+                    sx={{
+                        textAlign: "center",
+                        marginBottom: "30px",
+                        color: "#FEC195",
+                        fontWeight: "bold",
+                    }}
+                >
+                    Mon entreprise & mes motivations
+                </Typography>
+
+                <Card
+                    sx={{
+                        background: "#1a1a1a",
+                        padding: "30px",
+                        borderRadius: "12px",
+                        border: "2px solid #FEC195",
+                    }}
+                >
+                    <CardContent>
+                        <Typography
+                            sx={{
+                                textAlign: "justify",
+                                fontSize: "1.15rem",
+                                lineHeight: 1.8,
+                                color: "#fff",
+                            }}
+                        >
+                            {/* ---- Texte modifiable ---- */}
+                            J’ai créé mon entreprise pour offrir un espace où l’art, l’esthétique et
+                            la confiance en soi se rencontrent. Chaque maquillage est pensé comme une
+                            collaboration avec le client, pour mettre en valeur son style, son
+                            énergie et son univers.
+
+                            <br /><br />
+
+                            Ce qui me motive chaque jour, c’est de voir mes clients repartir avec le
+                            sourire, confiants, transformés… et fiers d’eux-mêmes.
+                        </Typography>
+                    </CardContent>
+                </Card>
+            </Box>
+
+        </Box>
+    );
+}
