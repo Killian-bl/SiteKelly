@@ -52,7 +52,8 @@ export default function MakeUp() {
         >
             <Card
                 sx={{
-                    width: "100%",
+                    width: "12em",
+                    height: "25em",
                     maxWidth: 300,
                     borderRadius: "12px",
                     overflow: "hidden",

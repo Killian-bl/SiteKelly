@@ -1,19 +1,22 @@
 import { Box, Container, Typography, Button, Grid, Card, CardMedia, CardContent } from "@mui/material";
 import ButtonContact from "../components/buttons/ButtonContact.tsx";
+import fond from "../assets/images/fond2.jpg";
 
-const portfolioItems = [
-    { id: 1, title: "Maquillage Mariage", image: "https://source.unsplash.com/400x400/?makeup,wedding" },
-    { id: 2, title: "Shooting Mode", image: "https://source.unsplash.com/400x400/?makeup,model" },
-    { id: 3, title: "Soirée & Événement", image: "https://source.unsplash.com/400x400/?makeup,evening" },
-];
+{/*const portfolioItems = [
+        {id: 1, title: "Maquillage Mariage", image: "https://source.unsplash.com/400x400/?makeup,wedding"},
+        {id: 2, title: "Shooting Mode", image: "https://source.unsplash.com/400x400/?makeup,model"},
+        {id: 3, title: "Soirée & Événement", image: "https://source.unsplash.com/400x400/?makeup,evening"},
+    ]; */}
 
 const Home = () => {
     return (
         <Box>
-            {/* Hero Section */}
             <Box
                 sx={{
-                    backgroundColor: "323131",
+                    backgroundImage: `url(${fond})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
                     minHeight: "70vh",
                     display: "flex",
                     flexDirection: "column",
@@ -34,18 +37,19 @@ const Home = () => {
                 </ButtonContact>
             </Box>
 
-            {/* À propos Section */}
             <Container sx={{ py: 8 }}>
                 <Typography variant="h4" gutterBottom sx={{ mb: 3, fontWeight: "bold", textAlign: "center" }}>
                     À propos
                 </Typography>
-                <Typography variant="body1" sx={{ textAlign: "center", maxWidth: 800, mx: "auto" }}>
-                    Kelly est une maquilleuse professionnelle passionnée par la beauté et l’élégance. Elle accompagne ses clients pour chaque occasion, qu’il s’agisse de mariages, de shootings ou d’événements spéciaux, en mettant toujours l’accent sur votre unicité.
+                <Typography variant="body1" sx={{ textAlign: "justify", maxWidth: 800, mx: "auto" }}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed metus vel lacus euismod dapibus. Praesent sit amet mollis risus. Cras augue ipsum, fermentum gravida volutpat eget, vestibulum vitae libero. Nullam nec nibh non dui cursus scelerisque vestibulum pellentesque neque. Ut eros nisi, dapibus sed lobortis at, sollicitudin vel risus. Maecenas semper felis in commodo dapibus. Etiam tincidunt turpis metus. Curabitur pharetra lectus facilisis lacus facilisis, interdum commodo justo ornare. Praesent eu consequat ipsum. Donec eu dui tristique, bibendum enim a, ornare velit. Fusce varius ultrices purus, porta cursus nisl mattis ac. Donec vel magna eget elit pellentesque congue. Proin cursus in tortor sed tempor. Integer ullamcorper libero non enim vehicula feugiat. Integer hendrerit ut felis ac volutpat.
+                </Typography>
+                <Typography variant="body1" sx={{ textAlign: "justify", maxWidth: 800, mx: "auto" }}>
+                    Ut sed nisi eget felis gravida tristique in eu mi. Donec augue lacus, varius sed tincidunt et, commodo vel sem. Suspendisse sed odio in ex ultrices blandit. Nulla magna nunc, vehicula a ligula fringilla, condimentum ornare ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis turpis ipsum, dictum ac mollis et, bibendum quis justo. Sed eget pharetra dui, non imperdiet metus. Suspendisse vestibulum mauris eget nisl bibendum ultrices. Nunc ullamcorper nulla in lacus pulvinar, non congue libero ultrices.
                 </Typography>
             </Container>
 
-            {/* Portfolio Section */}
-            <Container sx={{ py: 8 }}>
+            {/*<Container sx={{ py: 8 }}>
                 <Typography variant="h4" gutterBottom sx={{ mb: 4, fontWeight: "bold", textAlign: "center" }}>
                     Portfolio
                 </Typography>
@@ -63,10 +67,9 @@ const Home = () => {
                         </Grid>
                     ))}
                 </Grid>
-            </Container>
+            </Container>*/}
 
-            {/* Prendre rendez-vous Section */}
-            <Box sx={{ backgroundColor: "#f3e5f5", py: 10, textAlign: "center" }}>
+            <Box sx={{ backgroundColor: "#be0000", py: 10, textAlign: "center" }}>
                 <Typography variant="h4" gutterBottom sx={{ mb: 3, fontWeight: "bold" }}>
                     Prenez rendez-vous
                 </Typography>
