@@ -1,9 +1,5 @@
 import { Box, Typography, Grid, Avatar, Card, CardContent } from "@mui/material";
-
-// --- Images à modifier selon ton projet ---
 import aboutImg from "../assets/images/about.jpg";
-
-// Logos clients
 import client1 from "../assets/clients/client1.png";
 
 
@@ -17,7 +13,6 @@ export default function About() {
     return (
         <Box sx={{ padding: "60px 20px", maxWidth: "1200px", margin: "0 auto" }}>
 
-            {/* --------------------- SECTION 1 : À PROPOS --------------------- */}
             <Typography
                 variant="h3"
                 sx={{
@@ -32,7 +27,6 @@ export default function About() {
 
             <Grid container spacing={4} alignItems="center">
 
-                {/* PHOTO */}
                 <Grid item xs={12} md={5} sx={{ textAlign: "center" }}>
                     <Avatar
                         src={aboutImg}
@@ -46,7 +40,6 @@ export default function About() {
                     />
                 </Grid>
 
-                {/* TEXTE */}
                 <Grid item xs={12} md={7}>
                     <Typography
                         sx={{
@@ -56,7 +49,6 @@ export default function About() {
                             color: "#fff",
                         }}
                     >
-                        {/* ---- Texte modifiable ---- */}
                         Je m'appelle Kelly, maquilleuse passionnée spécialisée dans le maquillage
                         artistique, glamour et effets spéciaux. J’aide mes clients à exprimer leur
                         identité et leur créativité à travers des looks uniques et professionnels.
@@ -69,7 +61,6 @@ export default function About() {
                 </Grid>
             </Grid>
 
-            {/* --------------------- SECTION 2 : CLIENTS --------------------- */}
             <Box sx={{ marginTop: "80px" }}>
                 <Typography
                     variant="h4"
@@ -113,7 +104,6 @@ export default function About() {
                 </Grid>
             </Box>
 
-            {/* --------------------- SECTION 3 : ENTREPRISE & MOTIVATIONS --------------------- */}
             <Box sx={{ marginTop: "80px" }}>
                 <Typography
                     variant="h4"
@@ -144,7 +134,6 @@ export default function About() {
                                 color: "#fff",
                             }}
                         >
-                            {/* ---- Texte modifiable ---- */}
                             J’ai créé mon entreprise pour offrir un espace où l’art, l’esthétique et
                             la confiance en soi se rencontrent. Chaque maquillage est pensé comme une
                             collaboration avec le client, pour mettre en valeur son style, son

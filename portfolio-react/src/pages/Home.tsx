@@ -1,6 +1,7 @@
 import { Box, Container, Typography, Button, Grid, Card, CardMedia, CardContent } from "@mui/material";
 import ButtonContact from "../components/buttons/ButtonContact.tsx";
 import fond from "../assets/images/fond2.jpg";
+import {useNavigate} from "react-router";
 
 {/*const portfolioItems = [
         {id: 1, title: "Maquillage Mariage", image: "https://source.unsplash.com/400x400/?makeup,wedding"},
@@ -9,6 +10,12 @@ import fond from "../assets/images/fond2.jpg";
     ]; */}
 
 const Home = () => {
+    const navigate = useNavigate();
+
+    const handleClickMeet = () => {
+        navigate("/Contact")
+    }
+
     return (
         <Box>
             <Box
@@ -32,7 +39,7 @@ const Home = () => {
                 <Typography variant="h5" gutterBottom>
                     Sublimez votre beauté naturelle
                 </Typography>
-                <ButtonContact variant="contained" color="primary" size="large" sx={{ mt: 3 }}>
+                <ButtonContact onClick={handleClickMeet} variant="contained" color="primary" size="large" sx={{ mt: 3 }}>
                     Prendre rendez-vous
                 </ButtonContact>
             </Box>
@@ -76,7 +83,7 @@ const Home = () => {
                 <Typography variant="body1" sx={{ mb: 4, maxWidth: 600, mx: "auto" }}>
                     Réservez votre séance facilement et rapidement. Kelly Make-Up s’adapte à vos envies et à votre emploi du temps.
                 </Typography>
-                <Button variant="contained" color="primary" size="large">
+                <Button onClick={handleClickMeet} variant="contained" color="primary" size="large">
                     Prendre rendez-vous
                 </Button>
             </Box>
