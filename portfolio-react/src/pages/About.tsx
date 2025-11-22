@@ -1,13 +1,15 @@
 import { Box, Typography, Grid, Avatar, Card, CardContent } from "@mui/material";
 import aboutImg from "../assets/images/about.jpg";
 import client1 from "../assets/clients/client1.png";
+import client2 from "../assets/clients/client2.png";
+import client3 from "../assets/clients/client3.jpg"
 
 
 export default function About() {
     const clients = [
         { name: "Client 1", logo: client1 },
-        { name: "Client 2", logo: client1 },
-        { name: "Client 3", logo: client1 },
+        { name: "Client 2", logo: client2 },
+        { name: "Client 3", logo: client3 },
     ];
 
     return (
@@ -25,9 +27,11 @@ export default function About() {
                 À propos de moi
             </Typography>
 
-            <Grid container spacing={4} alignItems="center">
+            <Grid container spacing={4} alignItems="center" justifyContent={"center"}>
 
-                <Grid item xs={12} md={5} sx={{ textAlign: "center" }}>
+                <Grid item xs={12} md={5} sx={{
+                    textAlign: "center",
+                }}>
                     <Avatar
                         src={aboutImg}
                         alt="Kelly Make-Up"

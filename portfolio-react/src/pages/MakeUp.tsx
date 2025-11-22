@@ -4,14 +4,14 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Container } from "@mui/material";
 
-import makeup1 from "../assets/portfolio/makeup1.jpg";
-import makeup2 from "../assets/portfolio/makeup2.jpg";
-import makeup3 from "../assets/portfolio/makeup3.jpg";
-import makeup4 from "../assets/portfolio/makeup4.jpg";
-import makeup5 from "../assets/portfolio/makeup5.jpg";
-import makeup6 from "../assets/portfolio/makeup6.jpg";
-import makeup7 from "../assets/portfolio/makeup7.jpg";
-import makeup8 from "../assets/portfolio/makeup8.jpg";
+import makeup1 from "../assets/horror/horror10.jpeg";
+import makeup2 from "../assets/horror/horror2.jpeg";
+import makeup3 from "../assets/horror/horror1.jpeg";
+import makeup4 from "../assets/horror/horror4.jpeg";
+import makeup5 from "../assets/beauty/beauty4.jpeg";
+import makeup6 from "../assets/beauty/beauty2.jpeg";
+import makeup7 from "../assets/beauty/beauty16.jpg";
+import makeup8 from "../assets/beauty/beauty19.jpg";
 
 const horrorMakeups = [
     { title: "Bloody Girl", image: makeup1, price: "250$" },
@@ -33,7 +33,7 @@ export default function MakeUp() {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 3,  // 3 par 3
+        slidesToShow: 3,
         slidesToScroll: 3,
         responsive: [
             { breakpoint: 1024, settings: { slidesToShow: 2, slidesToScroll: 2 }},

@@ -5,7 +5,7 @@ import { IconButton, Menu, MenuItem,} from "@mui/material";
 import {useState} from "react";
 import MenuIcon from '@mui/icons-material/Menu';
 
-import logo from "../../assets/images/IconSite.svg";
+import logo from "../../assets/images/logo2.png";
 import ButtonLayout from "../../components/buttons/ButtonLayout.tsx";
 
 
@@ -73,7 +73,7 @@ export default function Header() {
                     sx={{display: "flex", justifyContent: "space-between", alignItems: "center", cursor: "pointer"}}
                     onClick={() => navigate('/')}
                 >
-                    <img height={70} src={logo} style={{margin: '5px'}}/>
+                    <img height={90} src={logo} style={{margin: '5px'}}/>
                 </Box>
 
                 <Box sx={{ display: { xs: 'none', sm: 'none', md: 'flex' } }}>

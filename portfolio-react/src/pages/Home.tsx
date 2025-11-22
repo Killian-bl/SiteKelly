@@ -1,20 +1,9 @@
-import { Box, Container, Typography, Button, Grid, Card, CardMedia, CardContent } from "@mui/material";
+import { Box, Container, Typography, Button} from "@mui/material";
 import ButtonContact from "../components/buttons/ButtonContact.tsx";
 import fond from "../assets/images/fond2.jpg";
-import {useNavigate} from "react-router";
-
-{/*const portfolioItems = [
-        {id: 1, title: "Maquillage Mariage", image: "https://source.unsplash.com/400x400/?makeup,wedding"},
-        {id: 2, title: "Shooting Mode", image: "https://source.unsplash.com/400x400/?makeup,model"},
-        {id: 3, title: "Soirée & Événement", image: "https://source.unsplash.com/400x400/?makeup,evening"},
-    ]; */}
+import Comment from "../components/Comment.tsx"
 
 const Home = () => {
-    const navigate = useNavigate();
-
-    const handleClickMeet = () => {
-        navigate("/Contact")
-    }
 
     return (
         <Box>
@@ -34,13 +23,13 @@ const Home = () => {
                 }}
             >
                 <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: "bold" }}>
-                    Kelly Make-Up
+                    Elyvolution
                 </Typography>
                 <Typography variant="h5" gutterBottom>
                     Sublimez votre beauté naturelle
                 </Typography>
-                <ButtonContact onClick={handleClickMeet} variant="contained" color="primary" size="large" sx={{ mt: 3 }}>
-                    Prendre rendez-vous
+                <ButtonContact>
+
                 </ButtonContact>
             </Box>
 
@@ -56,36 +45,8 @@ const Home = () => {
                 </Typography>
             </Container>
 
-            {/*<Container sx={{ py: 8 }}>
-                <Typography variant="h4" gutterBottom sx={{ mb: 4, fontWeight: "bold", textAlign: "center" }}>
-                    Portfolio
-                </Typography>
-                <Grid container spacing={4}>
-                    {portfolioItems.map((item) => (
-                        <Grid item xs={12} sm={6} md={4} key={item.id}>
-                            <Card sx={{ borderRadius: 3, boxShadow: 3 }}>
-                                <CardMedia component="img" height="250" image={item.image} alt={item.title} />
-                                <CardContent>
-                                    <Typography variant="h6" component="div">
-                                        {item.title}
-                                    </Typography>
-                                </CardContent>
-                            </Card>
-                        </Grid>
-                    ))}
-                </Grid>
-            </Container>*/}
-
             <Box sx={{ backgroundColor: "#be0000", py: 10, textAlign: "center" }}>
-                <Typography variant="h4" gutterBottom sx={{ mb: 3, fontWeight: "bold" }}>
-                    Prenez rendez-vous
-                </Typography>
-                <Typography variant="body1" sx={{ mb: 4, maxWidth: 600, mx: "auto" }}>
-                    Réservez votre séance facilement et rapidement. Kelly Make-Up s’adapte à vos envies et à votre emploi du temps.
-                </Typography>
-                <Button onClick={handleClickMeet} variant="contained" color="primary" size="large">
-                    Prendre rendez-vous
-                </Button>
+                <Comment></Comment>
             </Box>
         </Box>
     );
