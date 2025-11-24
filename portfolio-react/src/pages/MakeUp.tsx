@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Container } from "@mui/material";
+import "../CSS/carroussel.css";
 
 import makeup1 from "../assets/horror/horror10.jpeg";
 import makeup2 from "../assets/horror/horror2.jpeg";
@@ -12,6 +13,10 @@ import makeup5 from "../assets/beauty/beauty4.jpeg";
 import makeup6 from "../assets/beauty/beauty2.jpeg";
 import makeup7 from "../assets/beauty/beauty16.jpg";
 import makeup8 from "../assets/beauty/beauty19.jpg";
+import makeup9 from "../assets/scar/scar1.jpeg";
+import makeup10 from "../assets/scar/scar2.jpeg";
+import makeup11 from "../assets/scar/scar3.jpeg";
+import makeup12 from "../assets/scar/scar4.jpeg";
 
 const horrorMakeups = [
     { title: "Bloody Girl", image: makeup1, price: "250$" },
@@ -26,6 +31,13 @@ const makeups = [
     { title: "Smokey Eyes", image: makeup7, price: "300$"},
     { title: "Colorful Style", image: makeup8, price: "350$"},
 ];
+
+const scars = [
+    { title: "Clown", image: makeup9, price: "60$"},
+    { title: "Rasor", image: makeup10, price: "60$"},
+    { title: "Frankenstein", image: makeup11, price: "60$"},
+    { title: "Exorciste", image: makeup12, price: "60$"},
+]
 
 export default function MakeUp() {
 
@@ -104,6 +116,25 @@ export default function MakeUp() {
                 <Container maxWidth="lg">
                     <Slider {...sliderSettings}>
                         {horrorMakeups.map(renderCard)}
+                    </Slider>
+                </Container>
+            </Box>
+
+            <Box sx={{ padding: "40px 20px" }}>
+                <Typography
+                    variant="h3"
+                    sx={{
+                        textAlign: "center",
+                        marginBottom: "40px",
+                        fontWeight: "bold",
+                        color: "#FEC195",
+                    }}
+                >
+                    Cicatrices
+                </Typography>
+                <Container maxWidth="lg">
+                    <Slider {...sliderSettings}>
+                        {scars.map(renderCard)}
                     </Slider>
                 </Container>
             </Box>

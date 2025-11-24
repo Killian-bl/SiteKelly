@@ -31,7 +31,6 @@ const Comment = () => {
                 Vos avis
             </Typography>
 
-            {/* Formulaire */}
             <Box
                 component="form"
                 onSubmit={handleSubmit}
@@ -63,7 +62,7 @@ const Comment = () => {
                 </Button>
             </Box>
 
-            {/* Liste des commentaires */}
+
             <Box sx={{ maxWidth: 700, mx: "auto", display: "flex", flexDirection: "column", gap: 2 }}>
                 {commentaires.length === 0 ? (
                     <Typography textAlign="center">Aucun commentaire pour le moment.</Typography>

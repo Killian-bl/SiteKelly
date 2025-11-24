@@ -1,6 +1,6 @@
 import { Box, Container, Typography, Button} from "@mui/material";
 import ButtonContact from "../components/buttons/ButtonContact.tsx";
-import fond from "../assets/images/fond2.jpg";
+import fond from "../assets/images/fond.png";
 import Comment from "../components/Comment.tsx"
 
 const Home = () => {
@@ -45,7 +45,7 @@ const Home = () => {
                 </Typography>
             </Container>
 
-            <Box sx={{ backgroundColor: "#be0000", py: 10, textAlign: "center" }}>
+            <Box sx={{ backgroundColor: "#9d0303", py: 10, textAlign: "center" }}>
                 <Comment></Comment>
             </Box>
         </Box>

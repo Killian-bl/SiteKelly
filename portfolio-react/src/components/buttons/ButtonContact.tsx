@@ -77,11 +77,11 @@ const StyledWrapper = styled.div`
     button {
         position: relative;
         padding: 12px 35px;
-        background: #fec195;
+        background: #ffffff;
         font-size: 17px;
         font-weight: 500;
         color: #181818;
-        border: 3px solid #fec195;
+        border: 3px solid #000000;
         border-radius: 8px;
         box-shadow: 0 0 0 #fec1958c;
         transition: all 0.3s ease-in-out;

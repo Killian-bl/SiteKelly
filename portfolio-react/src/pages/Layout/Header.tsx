@@ -35,7 +35,6 @@ export default function Header() {
                 justifyContent: "space-between",
                 alignItems: "center",
                 padding: "0 10px",
-                borderBottom: '4px solid #FEC195',
                 boxShadow: 'none',
                 outline: 'none',
             }}>
@@ -80,7 +79,7 @@ export default function Header() {
                     {menuPages.map((page) => (
                         <ButtonLayout
                             key={page.name}
-                            name={page.name} // <-- passe le nom ici
+                            name={page.name}
                             onClick={() => navigate(page.path)}
                         />
                     ))}
