@@ -87,7 +87,7 @@ export default function MakeUp() {
                     <Typography
                         variant="h6"
                         sx={{
-                            color: "#FEC195",
+                            color: "#9D0303",
                             fontWeight: "600",
                             textAlign: "center"
                         }}
@@ -108,7 +108,7 @@ export default function MakeUp() {
                         textAlign: "center",
                         marginBottom: "40px",
                         fontWeight: "bold",
-                        color: "#FEC195",
+                        color: "#9D0303",
                     }}
                 >
                     Portfolio Horror
@@ -127,7 +127,7 @@ export default function MakeUp() {
                         textAlign: "center",
                         marginBottom: "40px",
                         fontWeight: "bold",
-                        color: "#FEC195",
+                        color: "#9D0303",
                     }}
                 >
                     Cicatrices
@@ -146,7 +146,7 @@ export default function MakeUp() {
                         textAlign: "center",
                         marginBottom: "40px",
                         fontWeight: "bold",
-                        color: "#FEC195",
+                        color: "#9D0303",
                     }}
                 >
                     Portfolio Classic

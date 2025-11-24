@@ -20,7 +20,7 @@ export default function About() {
                 sx={{
                     textAlign: "center",
                     marginBottom: "40px",
-                    color: "#FEC195",
+                    color: "#9d0303",
                     fontWeight: "bold",
                 }}
             >
@@ -38,7 +38,7 @@ export default function About() {
                         sx={{
                             width: 280,
                             height: 280,
-                            border: "5px solid #FEC195",
+                            border: "5px solid #9D0303",
                             margin: "0 auto",
                         }}
                     />
@@ -71,7 +71,7 @@ export default function About() {
                     sx={{
                         textAlign: "center",
                         marginBottom: "30px",
-                        color: "#FEC195",
+                        color: "#9d0303",
                         fontWeight: "bold",
                     }}
                 >
@@ -86,7 +86,7 @@ export default function About() {
                                     background: "#1a1a1a",
                                     padding: "20px",
                                     borderRadius: "12px",
-                                    border: "2px solid #FEC195",
+                                    border: "2px solid #9D0303",
                                     display: "flex",
                                     alignItems: "center",
                                     justifyContent: "center",
@@ -114,7 +114,7 @@ export default function About() {
                     sx={{
                         textAlign: "center",
                         marginBottom: "30px",
-                        color: "#FEC195",
+                        color: "#9d0303",
                         fontWeight: "bold",
                     }}
                 >
@@ -126,7 +126,7 @@ export default function About() {
                         background: "#1a1a1a",
                         padding: "30px",
                         borderRadius: "12px",
-                        border: "2px solid #FEC195",
+                        border: "2px solid #9D0303",
                     }}
                 >
                     <CardContent>
