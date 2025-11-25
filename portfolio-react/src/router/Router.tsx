@@ -4,6 +4,9 @@ import Layout from "../pages/Layout/Layout.tsx";
 import About from "../pages/About.tsx";
 import Meet from "../pages/Meet.tsx";
 import MakeUp from "../pages/MakeUp.tsx";
+import HorrorMakeup from "../pages/HorrorMakeup.tsx";
+import ClassicMakeup from "../pages/ClassicMakeup.tsx";
+import ScarMakeup from "../pages/ScarMakeup.tsx";
 
 export const Router = createBrowserRouter([
     {
@@ -25,6 +28,18 @@ export const Router = createBrowserRouter([
             {
                 path: "/Portfolio",
                 element: <MakeUp/>,
+            },
+            {
+                path: "/Horror",
+                element: <HorrorMakeup/>,
+            },
+            {
+                path: "/Classic",
+                element: <ClassicMakeup/>,
+            },
+            {
+                path: "/Scar",
+                element: <ScarMakeup/>,
             }
         ]
     }

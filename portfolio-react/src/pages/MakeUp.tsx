@@ -17,6 +17,7 @@ import makeup9 from "../assets/scar/scar1.jpeg";
 import makeup10 from "../assets/scar/scar2.jpeg";
 import makeup11 from "../assets/scar/scar3.jpeg";
 import makeup12 from "../assets/scar/scar4.jpeg";
+import {useNavigate} from "react-router";
 
 const horrorMakeups = [
     { title: "Bloody Girl", image: makeup1, price: "250$" },
@@ -41,6 +42,20 @@ const scars = [
 
 export default function MakeUp() {
 
+    const navigate = useNavigate();
+
+    const handleClickHorror = () => {
+        navigate("/Horror");
+    }
+
+    const handleClickClassic = () => {
+        navigate("/Classic");
+    }
+
+    const handleClickScar = () => {
+        navigate("/Scar");
+    }
+
     const sliderSettings = {
         dots: true,
         infinite: true,
@@ -53,7 +68,7 @@ export default function MakeUp() {
         ]
     };
 
-    const renderCard = (item, index) => (
+    const renderCard = (item, index, onClick: () => void) => (
         <Box
             key={index}
             sx={{
@@ -61,6 +76,7 @@ export default function MakeUp() {
                 justifyContent: "center",
                 padding: 2,
             }}
+            onClick={onClick}
         >
             <Card
                 sx={{
@@ -115,8 +131,11 @@ export default function MakeUp() {
                 </Typography>
                 <Container maxWidth="lg">
                     <Slider {...sliderSettings}>
-                        {horrorMakeups.map(renderCard)}
+                        {horrorMakeups.map((item, index) =>
+                            renderCard(item, index, handleClickHorror)
+                        )}
                     </Slider>
+
                 </Container>
             </Box>
 
@@ -134,8 +153,11 @@ export default function MakeUp() {
                 </Typography>
                 <Container maxWidth="lg">
                     <Slider {...sliderSettings}>
-                        {scars.map(renderCard)}
+                        {scars.map((item, index) =>
+                            renderCard(item, index, handleClickScar)
+                        )}
                     </Slider>
+
                 </Container>
             </Box>
 
@@ -153,8 +175,11 @@ export default function MakeUp() {
                 </Typography>
                 <Container maxWidth="lg">
                     <Slider {...sliderSettings}>
-                        {makeups.map(renderCard)}
+                        {makeups.map((item, index) =>
+                            renderCard(item, index, handleClickClassic)
+                        )}
                     </Slider>
+
                 </Container>
             </Box>
         </>
