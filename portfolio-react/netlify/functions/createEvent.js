@@ -15,8 +15,7 @@ const getAuth = () => {
 export const handler = async (event) => {
     try {
         const { name, email, startDateTime, durationMinutes = 60, notes } = JSON.parse(event.body);
-
-        // Basic validation
+        
         if (!name || !email || !startDateTime) {
             return { statusCode: 400, body: JSON.stringify({ error: "Missing fields" }) };
         }
@@ -24,7 +23,6 @@ export const handler = async (event) => {
         const auth = await getAuth();
         const calendar = google.calendar({ version: "v3", auth });
 
-        // 1) Optionnel -> vérifier disponibilité avant d'insérer (freebusy)
         const endDateTime = new Date(new Date(startDateTime).getTime() + durationMinutes * 60000).toISOString();
 
         const fb = await calendar.freebusy.query({
@@ -40,7 +38,6 @@ export const handler = async (event) => {
             return { statusCode: 409, body: JSON.stringify({ error: "Slot already booked" }) };
         }
 
-        // 2) Insert event
         const eventResource = {
             summary: `RDV Maquillage - ${name}`,
             description: `Client: ${name}\nEmail: ${email}\n${notes || ""}`,
@@ -55,8 +52,6 @@ export const handler = async (event) => {
             sendUpdates: "all", // envoie mails aux invités
         });
 
-        // 3) Optionnel: envoyer mail personnalisé via SendGrid / nodemailer
-        // await sendConfirmationEmail(email, ...)
 
         return {
             statusCode: 200,
